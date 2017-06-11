@@ -28,10 +28,10 @@ $default_charset       = 'iso-8859-1';
 $lossy_encoding        = false;
 
 $domain                 = 'wire.local';
-$imapServerAddress      = 'mail.wire.local';
+$imapServerAddress      = 'ns2.wire.local';
 $imapPort               = 143;
 $useSendmail            = false;
-$smtpServerAddress      = 'mail.wire.local';
+$smtpServerAddress      = 'ns2.wire.local';
 $smtpPort               = 25;
 $sendmail_path          = '/usr/sbin/sendmail';
 $sendmail_args          = '-i -t';
