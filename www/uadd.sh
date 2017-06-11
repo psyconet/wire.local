@@ -9,14 +9,13 @@ echo -ne "\nUser $1 created...\n\n" > ../logs/$domain
 
 # Configuring Apache For The New User
 mkdir $usrhome/www &>> ../logs/$domain
-cp -var ../../commonTemplate/* $usrhome/www/ &>> ../logs/$domain
+cp -var ../commonTemplate/* $usrhome/www/ &>> ../logs/$domain
 #echo "<center><h1>Hi..I'm $hostname</h1></center>" > $usrhome/www/index.php
 
 
 chmod +x $usrhome &>> ../logs/$domain
 chown $1:$1 -R $usrhome/* &>> ../logs/$domain
 chmod 775 $usrhome/* &>> ../logs/$domain
-chmod 664 $usrhome/www/* &>> ../logs/$domain
 echo -ne "\nFile & Directory Permissions Updated...\n" >> ../logs/$domain
 ln -s $usrhome/www $usrhome/public_html &>> ../logs/$domain
 echo -ne "\nwww link created...\n" >> ../logs/$domain
