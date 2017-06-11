@@ -1,7 +1,7 @@
 <center>
 <?php
 	include('db.php');
-	session_start();
+	//session_start();
 			 
 	$username=$_POST['username'];
 	$password=$_POST['password'];
@@ -22,10 +22,11 @@
 		}		
 		else{
 			//session_register("username");
-			$update_query = "UPDATE tb_register SET _active = 'yes' WHERE _name = '$username'";
-			mysqli_query($conn, $update_query);
-			$_SESSION['login_user'] = $username;
-			header('Location: home.php');		
+			//$update_query = "UPDATE tb_register SET _active = 'yes' WHERE _name = '$username'";
+			//mysqli_query($conn, $update_query);
+			//$_SESSION['login_user'] = $username;
+			
+			header('Location: http://www.'.$username.'.local');		
 		}
 	}	
 	mysqli_close($conn);
